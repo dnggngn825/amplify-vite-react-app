@@ -6,9 +6,10 @@ const schema = a.schema({
       name: a.string().required(),
       description: a.string(),
       price: a.float().required(),
-      imageUrl: a.string(),
-      category: a.string(),
+      imageUrl: a.string().required(),
+      category: a.string().required(),
       inStock: a.boolean().default(true),
+      rating: a.float().default(5),
     })
     .authorization((allow) => [allow.publicApiKey()]),
 });
