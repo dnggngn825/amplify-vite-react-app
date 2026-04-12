@@ -1,25 +1,43 @@
-## AWS Amplify React+Vite Starter Template
+# Oda — Contemporary Furniture Store
 
-This repository provides a starter template for creating applications using React+Vite and AWS Amplify, emphasizing easy setup for authentication, API, and database capabilities.
+A modern furniture e-commerce app built with React, Vite, and AWS Amplify Gen 2.
 
-## Overview
+## Tech Stack
 
-This template equips you with a foundational React application integrated with AWS Amplify, streamlined for scalability and performance. It is ideal for developers looking to jumpstart their project with pre-configured AWS services like Cognito, AppSync, and DynamoDB.
+- **Frontend:** React 18, TypeScript, Vite
+- **Backend:** AWS Amplify Gen 2 (AppSync GraphQL, DynamoDB, Cognito)
+- **Styling:** Custom CSS with BEM naming, CSS custom properties
+- **Animation:** Framer Motion
+- **Icons:** Lucide React
+- **Routing:** React Router v7
 
-## Features
+## Upcoming Features
 
-- **Authentication**: Setup with Amazon Cognito for secure user authentication.
-- **API**: Ready-to-use GraphQL endpoint with AWS AppSync.
-- **Database**: Real-time database powered by Amazon DynamoDB.
+### Product variant awareness
 
-## Deploying to AWS
+- [ ] Product detail page
+- [ ] Variant model in schema (size, color, material)
+- [ ] Variant selector UI
 
-For detailed instructions on deploying your application, refer to the [deployment section](https://docs.amplify.aws/react/start/quickstart/#deploy-a-fullstack-app-to-aws) of our documentation.
+### Shopping cart + checkout
 
-## Security
+- [ ] Cart state management and add-to-cart interaction
+- [ ] Cart item quantity controls and order summary
+- [ ] Checkout flow and payment integration
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+### Robust filtering with URL state
 
-## License
+- [ ] Price range, rating, and in-stock filters
+- [ ] Sort options (price, rating, newest)
+- [ ] Sync filter state to URL search params for shareable links
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
+## What's Been Done
+
+- Product CRUD with real-time updates via Amplify `observeQuery`
+- Public API key auth for browsing; Cognito auth for account/wishlist pages
+- Client-side routing with layout route pattern (`/`, `/account`, `/cart`, `/wishlist`)
+- `RequireAuth` component and `useAuth` hook for shared auth logic
+- Seed script with 50 products across 5 categories
+- Transparent-to-frosted navbar on scroll, hero with animated heading
+- Responsive product grid (1/2/4 columns), category filter nav
+- Centralized TypeScript interfaces in `src/types/`
